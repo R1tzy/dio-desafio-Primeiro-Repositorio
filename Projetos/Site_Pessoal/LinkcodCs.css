@@ -1,0 +1,117 @@
+body{
+    background-color: #303d3d;
+    text-align: center;
+}
+.photo{
+    border: 1% solid #000;
+    border-radius: 5%;
+    margin-top: 25px;
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;   
+}
+.text1{
+
+    font-family: Consolas;
+    color: rgb(84, 155, 119);
+    text-align: center;
+    margin-bottom: -3%;
+    
+}
+.text2{
+
+    font-family: Courier New;
+    font-style: italic;
+    color: rgb(84, 155, 119);
+    text-align: center;
+    margin-top: 2pc;
+    
+}
+a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 24px;
+    height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.cartoes{
+    display: grid;
+    grid-template-columns: 10.5em 10.5em;
+    grid-template-rows: 200px 200px ;
+    grid-gap: -50%;
+    justify-content: center;
+    
+
+}
+.cartao{
+    height: 80%;
+    width: 80%;
+    perspective: 1000px; /* perspectiva em 3D */
+    
+}
+
+.cartao-container{
+    position: relative;
+    height: 100%;
+    transition: transform .4s;
+    transform-style: preserve-3d;
+}
+
+.cartao:hover .cartao-container{
+    transform: rotateY(180deg); /* CARTÃO VAI GIRAR 180 GRAUS*/
+
+}
+
+.cartao-front, .cartao-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    z-index: 1;
+    border-radius: 5px;
+}
+.cartao-front{
+    background: #e0e6e6ce;
+}
+
+.cartao-back{
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #c1c7c7ce ;
+}
+
+.cartao1 .cartao-front{
+    background-image: url(instagram.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px;
+}
+
+.cartao2 .cartao-front{
+    background-image: url(linkedin.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    float: right;
+}
+
+.cartao3 .cartao-front{
+    background-image: url(whatsapp.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px;
+}
+
+.cartao4 .cartao-front{
+    background-image: url(github.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px;
+}
